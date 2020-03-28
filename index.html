@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task</title>
+</head>
+<style>
+    body {
+        background-color: lavender;
+    }
+    
+    .main-div {
+        margin-top: 100px;
+        margin-left: 280px;
+        margin-right: 280px;
+        padding: 20px;
+        background-color: white;
+        text-align: center;
+    }
+    
+    h2 {
+        text-align: center;
+        color: blue
+    }
+    
+    table {
+        padding-left: 280px;
+        padding-top: 20px;
+    }
+    
+    td {
+        border: 1px solid blue;
+    }
+</style>
+
+<body>
+    <div class="main-div">
+        <form action="">
+            <h2>My form</h2>
+            First Name : <input type="text" id="first_name" placeholder="first name"><br><br> Last Name : <input type="text" id="last_name" placeholder="last name"><br><br>
+            <button type="button" onclick="save()">Save</button>
+        </form>
+
+        <table id="myTable">
+            <tr>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    function save() {
+        var first_name_value = document.getElementById("first_name").value;
+        var last_name_value = document.getElementById("last_name").value;
+
+        var table = document.getElementById("myTable");
+        var row = table.insertRow(0);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = "new cell 1";
+        cell2.innerHTML = "new cell 2";
+    }
+</script>
+
+</html>
